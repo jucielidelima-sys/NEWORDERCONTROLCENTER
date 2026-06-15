@@ -578,7 +578,7 @@ def home():
     ''', unsafe_allow_html=True)
 
     st.markdown('<div class="section-title">Módulos Principais</div>', unsafe_allow_html=True)
-    c1, c2, c3, c4 = st.columns(4)
+    c1, c2, c3, c4, c5 = st.columns(5)
     with c1:
         if st.button("🏭 PRODUÇÃO", use_container_width=True):
             st.session_state["menu_target"] = "Produção"
@@ -595,8 +595,6 @@ def home():
         if st.button("👥 RH • PESSOAS", use_container_width=True):
             st.session_state["menu_target"] = "RH • Pessoas"
             st.rerun()
-
-    c5, _, _, _ = st.columns(4)
     with c5:
         if st.button("♻️ SCRAP", use_container_width=True):
             st.session_state["menu_target"] = "Scrap"
